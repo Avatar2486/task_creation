@@ -85,7 +85,7 @@ exports.createTask = async (req, res, next) => {
 
         const task = await Task.createTask(newTask);
 
-        // tried returning just the task but client wanted more info
+        // tried returning just the task
         // res.status(201).json(task);
 
         res.status(201).json({
@@ -156,3 +156,4 @@ exports.deleteTask = async (req, res, next) => {
         next(error);
     }
 };
+
